@@ -4,15 +4,16 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{cite}
 \usepackage{hyperref}
+\usepackage{csquotes}
 \usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
 \usepackage[english]{babel}
 \usepackage{newtxtext,newtxmath}
 \usepackage{svg}
 \usepackage{setspace}
 \usepackage{tocbibind}
-\usepackage{hyperref}
+\usepackage[style=reading,backend=bibtex]{biblatex}
+\bibliography{sources}
 \hypersetup{
 	colorlinks   = true,    % Colours links instead of ugly boxes
 	urlcolor     = black,    % Colour for external hyperlinks
@@ -38,21 +39,15 @@
 		
 	\section{Conclusion}
 		\input{Conclusion/Conclusion}
-		
+	
 	\section{Attachments}
 	\subsection{Anti-Communist propaganda}
 	\label{sec:Propaganda}
 	\includegraphics{Propaganda/is-this-tomorrow.jpg}
 	\includegraphics{Propaganda/colleges-hire-red-professors.jpg}
+	\printbibliography
+	\input{Selbstaendigkeitserklaerung}
 	\newpage
-	\input{Selbstaendigkeitserklaerung}\\
-	\\
-	\\
-	\input{License}\\
-	\\
-	\\
-	{\setstretch{1.0}
-		\bibliography{sources}{}
-		\bibliographystyle{plain}
-	}
+	
+	\input{License}
 \end{document}
